@@ -20,6 +20,20 @@
                 object-fit: cover;
             }
         }
+
+        /* Estilo básico para el icono del menú hamburguesa en móvil */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 2rem;
+            color: #f8fafc;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -28,6 +42,12 @@
     <!-- Barra de navegación superior -->
     <header class="navbar">
         <div class="logo">Soluciones Digitales Ahmed</div>
+
+        <!-- Botón Menú Hamburguesa -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class='bx bx-menu'></i>
+        </div>
+
         <nav class="nav-links">
             <a href="index.html" class="link active">Accueil</a>
             <a href="#services" class="link">Services</a>
@@ -106,18 +126,6 @@
             <span class="corner-badge">Logiciels et Office</span>
             <div class="dots"></div>
         </section>
-
-        <!-- Tarjeta Central Flotante -->
-        <!-- 
-        <div class="center-card">
-            <h1>Soluciones Digitales Ahmed</h1>
-            <p>Nous résolvons les problèmes que d'autres se contentent de formater. Logiciel, web et support numérique
-                sur mesure.</p>
-            <div class="card-actions">
-                <a href="#contacto" class="btn-primary">Prendre Rendez-vous</a>
-                <button id="toggle-play" class="btn-secondary">Mettre en pause</button>
-            </div>
-        </div>-->
 
     </main>
 
