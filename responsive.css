@@ -61,3 +61,39 @@
         height: 2px;
     }
 }
+
+/* --- ESTILOS Y APERTURA DEL MENÚ HAMBURGUESA EN MÓVIL --- */
+@media (max-width: 768px) {
+
+    /* Por defecto, los enlaces están ocultos en pantallas pequeñas */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        /* Ajusta esto según lo alta que sea tu barra de navegación */
+        left: 0;
+        width: 100%;
+        background-color: #0b1120;
+        /* Mismo fondo oscuro de tu web */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid #334155;
+        z-index: 1000;
+    }
+
+    /* Cuando el JavaScript añade la clase 'active', el menú se muestra desplegado */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* Espaciado limpio para los enlaces dentro del menú desplegable */
+    .nav-links a,
+    .nav-links .link,
+    .nav-links .btn-nav {
+        margin: 10px 0;
+        text-align: center;
+        width: 80%;
+    }
+}
