@@ -116,3 +116,23 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+// Envío directo del formulario de contacto a WhatsApp
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('client-name').value.trim();
+    const service = document.getElementById('client-service').value;
+    const message = document.getElementById('client-message').value.trim();
+
+    // IMPORTANTE: Pon aquí tu número real de WhatsApp (ej: 212612345678, sin '+' ni '0' después del 212)
+    const phone = '212614738881';
+
+    const text = `Bonjour Ahmed, je m'appelle ${name}.\nService : ${service}\nMessage : ${message}`;
+    const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+
+    // Más fiable que window.open en móviles y navegadores estrictos
+    window.location.href = url;
+  });
+}
