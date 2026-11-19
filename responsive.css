@@ -373,19 +373,23 @@
 
 /* Responsive móvil y tablet */
 @media (max-width: 860px) {
+
+    /* Footer de 2 en 2 */
     .footer-container {
-        grid-template-columns: 1fr;
-        gap: 28px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 18px;
         text-align: left;
     }
 
-    .site-footer {
-        padding: 50px 5% 22px;
+    .footer-brand {
+        grid-column: 1 / -1;
     }
-}
 
-/* Responsive móvil y tablet */
-@media (max-width: 860px) {
+    .site-footer {
+        padding: 45px 5% 22px;
+    }
+
+    /* Sección de contacto */
     .contact-section {
         padding: 65px 5%;
         scroll-margin-top: 65px;
