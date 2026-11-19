@@ -97,3 +97,310 @@
         width: 80%;
     }
 }
+
+/* ========== RESPONSIVE SECCIÓN #services ========== */
+
+/* Tablets y pantallas medianas (hasta 992px) */
+@media (max-width: 992px) {
+    #services.services-section {
+        padding: 75px 6%;
+        scroll-margin-top: 70px;
+    }
+
+    #services .services-header h2 {
+        font-size: 2rem;
+    }
+
+    #services .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Móviles (hasta 768px) */
+@media (max-width: 768px) {
+    #services.services-section {
+        padding: 60px 5%;
+        scroll-margin-top: 65px;
+    }
+
+    #services .services-header {
+        margin-bottom: 35px;
+    }
+
+    #services .services-header h2 {
+        font-size: 1.75rem;
+    }
+
+    #services .services-header p {
+        font-size: 0.95rem;
+    }
+
+    #services .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #services .service-card {
+        padding: 24px 20px;
+    }
+
+    #services .service-card:hover {
+        transform: none;
+        /* Evita saltos raros al tocar en pantalla táctil */
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    #services.services-section {
+        padding: 50px 16px;
+    }
+
+    #services .services-header h2 {
+        font-size: 1.55rem;
+    }
+
+    #services .service-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+
+    #services .service-card h3 {
+        font-size: 1.15rem;
+    }
+}
+
+/* Ajuste responsive para móvil */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 65px 4%;
+        scroll-margin-top: 65px;
+    }
+
+    .services-header h2 {
+        font-size: 1.85rem;
+    }
+
+    .service-card {
+        flex: 0 0 250px;
+        padding: 24px 18px;
+    }
+
+    .services-track-cards {
+        gap: 16px;
+        animation-duration: 20s;
+    }
+}
+
+/* Sección de Proyectos */
+.projects-section {
+    position: relative;
+    padding: 90px 6%;
+    min-height: 70vh;
+    background-color: #0b1120;
+    color: #f8fafc;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    scroll-margin-top: 75px;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.projects-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.projects-header h2 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    color: #f8fafc;
+}
+
+.projects-header h2 span {
+    color: #00d2ff;
+}
+
+.projects-header p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* Ventana del carrusel de proyectos hacia la izquierda */
+.projects-marquee {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0 25px;
+}
+
+/* Pista que se desplaza suavemente hacia la izquierda */
+.projects-track-cards {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: pasarProyectosIzquierda 28s linear infinite;
+}
+
+/* Se pausa al poner el ratón encima */
+.projects-marquee:hover .projects-track-cards {
+    animation-play-state: paused;
+}
+
+@keyframes pasarProyectosIzquierda {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.project-card {
+    flex: 0 0 305px;
+    background-color: #162033;
+    padding: 28px 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: #00d2ff;
+    border-color: #67e8f9;
+    box-shadow: 0 12px 28px rgba(0, 210, 255, 0.35);
+    color: #08131a;
+}
+
+.project-card:hover h3,
+.project-card:hover p {
+    color: #08131a;
+}
+
+.project-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: rgba(0, 210, 255, 0.14);
+    color: #00d2ff;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover .project-badge {
+    background: rgba(8, 19, 26, 0.16);
+    color: #08131a;
+}
+
+.project-icon {
+    width: 54px;
+    height: 54px;
+    background: rgba(0, 210, 255, 0.14);
+    color: #00d2ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    background: rgba(8, 19, 26, 0.16);
+    color: #08131a;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    color: #f8fafc;
+    transition: color 0.3s ease;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    font-size: 0.94rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.project-tag {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #38bdf8;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-tag {
+    color: #08131a;
+}
+
+/* Ajuste responsive para móvil */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 65px 4%;
+        scroll-margin-top: 65px;
+    }
+
+    .projects-header h2 {
+        font-size: 1.85rem;
+    }
+
+    .project-card {
+        flex: 0 0 255px;
+        padding: 22px 18px;
+    }
+
+    .projects-track-cards {
+        gap: 16px;
+        animation-duration: 22s;
+    }
+}
+
+/* Responsive móvil y tablet */
+@media (max-width: 860px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: left;
+    }
+
+    .site-footer {
+        padding: 50px 5% 22px;
+    }
+}
+
+/* Responsive móvil y tablet */
+@media (max-width: 860px) {
+    .contact-section {
+        padding: 65px 5%;
+        scroll-margin-top: 65px;
+    }
+
+    .contact-header h2 {
+        font-size: 1.85rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .contact-form {
+        padding: 24px 20px;
+    }
+}
