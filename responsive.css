@@ -408,3 +408,42 @@
         padding: 24px 20px;
     }
 }
+
+@media (max-width: 600px) {
+    .privacidad-cookies {
+        gap: 6px;
+        font-size: 0.85rem;
+    }
+
+    .privacidad-cookies a {
+        padding: 6px 8px;
+    }
+}
+
+/* === Responsive Privacidad y Cookies === */
+@media (max-width: 768px) {
+    .privacidad-cookies {
+        gap: 8px;
+        font-size: 0.88rem;
+    }
+
+    .privacidad-cookies a {
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacidad-cookies {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.85rem;
+    }
+
+    .privacidad-cookies span {
+        display: none;
+    }
+
+    .privacidad-cookies a {
+        padding: 6px 10px;
+    }
+}
